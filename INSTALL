@@ -1,0 +1,18 @@
+1. Build environment
+--------------------
+
+1. Cài đặt Meson và Ninja
+Trước tiên, bạn cần đảm bảo rằng bạn đã cài đặt Meson và Ninja (Meson sử dụng Ninja làm backend build).
+
+Cài đặt Meson:
+
+pip install meson
+Cài đặt Ninja:
+
+sudo apt install ninja-build
+
+python --version
+meson --version
+Ninja --version
+
+pip show meson
