@@ -27,22 +27,26 @@ Shell UI
 Operating System - Folder Struck
 │── Data/               # Dùng để lưu dữ liệu ứng dụng quan trọng, cần duy trì giữa các lần khởi động.
     │── App Data/       # Lưu trữ ảnh chụp từ camera hoặc ảnh tải về.
+    │── Documents/      # Nơi lưu trữ các tài liệu văn phòng (Word, Excel, v.v.).
+    │── Downloads/      # Thư mục chứa file tải về
     │── Pictures/       # Lưu trữ ảnh chụp từ camera hoặc ảnh tải về.
     │── Music/          # Thư mục chứa nhạc và nội dung âm thanh.
     │── Videos/         # Chứa video quay hoặc tải về.
-    │── Documents/      # Nơi lưu trữ các tài liệu văn phòng (Word, Excel, v.v.).
 │── Program Data/       # Mỗi ứng dụng có một thư mục lưu trữ dữ liệu riêng trong Isolated Storage.
 │── Program Files/      # Chứa các ứng dụng cài đặt trên hệ thống. Mỗi ứng dụng được lưu trữ trong một thư mục riêng biệt
     │── Micron Apps     # Ứng dụng được tải từ store
 │── Recovery/           # Thư mục chứa chương trình recovery
+    │── Tools           # 
+    │── omicronRE.exe   # 
+    │── config.conf     # 
 │── System/             # Chua he dieu hanh
     │── Drivers/        # 
     │── Libs/           # 
     │── Bin/            # 
     │── Configs/        # 
-    │── omicron.exec    # 
-    │── ShellUI.exec    # 
-    │── app.micpkg      #
+    │── omicron.exe     # 
+    │── ShellUI.exe     # 
+    │── app.mpkg        #
 │── Temp/               # Một số dữ liệu tạm thời hoặc cache của ứng dụng có thể được lưu ở đây.
 
 
