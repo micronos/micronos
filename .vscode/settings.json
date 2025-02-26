@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "stdint.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "stdarg.h": "c",
+        "gpu.h": "c",
+        "kerio.h": "c"
+    }
+}

@@ -1,0 +1,20 @@
+/dts-v1/;
+ / {
+    compatible = "brcm,bcm2836";  // Xác định SoC là BCM2836
+    model = "Raspberry Pi 2 Model B";
+
+    memory {
+        reg = <0x0 0x40000000>;  // 1GB RAM
+    };
+
+    chosen {
+        bootargs = "console=ttyAMA0,115200";  // Tham số boot
+    };
+
+    soc {
+        uart@7e201000 {
+            compatible = "brcm,bcm2835-aux-uart";
+            reg = <0x7e201000 0x100>;  // Địa chỉ UART
+        };
+    };
+};
