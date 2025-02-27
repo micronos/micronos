@@ -6,5 +6,5 @@ rem arm-none-eabi-gcc
 rem qemu-system-arm -m 1G -M raspi2b -serial stdio -kernel kernel.bin
 @REM -d in_asm
 
-qemu-system-arm -M raspi2b -m 1G -serial stdio -device loader,file=boot.bin,addr=0x8000 -display gtk
+qemu-system-arm -M raspi2b -m 1G -serial stdio -device loader,file=boot.bin,addr=0x8000
 @REM qemu-system-arm -M raspi2b -m 1G -serial stdio -kernel boot.elf

@@ -37,7 +37,7 @@ target_include_directories(boot PRIVATE include)
 # Tạo target kernel.elf từ boot và kernel
 add_executable(boot.elf $<TARGET_OBJECTS:asm> $<TARGET_OBJECTS:boot>)
 set_target_properties(boot.elf PROPERTIES
-    LINK_FLAGS "-T ${CMAKE_SOURCE_DIR}/boot/arch/arm32/linker.ld -ffreestanding -O2 -nostdlib"
+    LINK_FLAGS "-T ${CMAKE_CURRENT_SOURCE_DIR}/linker.ld -ffreestanding -O2 -nostdlib"
     OUTPUT_NAME "boot.elf"
 )
 
@@ -48,9 +48,14 @@ set_target_properties(boot.elf PROPERTIES
 # )
 
 # Chuyển ELF thành BIN
+set(BOOT_BIN "boot.bin")
+set(ROOT_BUILD_DIR "${CMAKE_BINARY_DIR}")
+
 add_custom_command(TARGET boot.elf POST_BUILD
-    COMMAND ${CMAKE_OBJCOPY} -O binary boot.elf boot.bin
-    COMMENT "Converting ELF to BIN"
+    COMMAND ${CMAKE_OBJCOPY} -O binary boot.elf ${BOOT_BIN}
+    COMMAND ${CMAKE_COMMAND} -E copy ${BOOT_BIN} ${ROOT_BUILD_DIR}/
+    COMMENT "Converting ELF to IMG"
 )
+
 
 # 0x18000

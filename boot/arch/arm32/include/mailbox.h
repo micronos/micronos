@@ -4,7 +4,8 @@
 #ifndef MAILBOX_H
 #define MAILBOX_H
 
-#define MAILBOX_BASE PERIPHERAL_BASE + MAILBOX_OFFSET
+// #define MAILBOX_BASE PERIPHERAL_BASE + MAILBOX_OFFSET
+#define MAILBOX_BASE 0x3F00B880  
 #define MAIL0_READ (((mail_message_t *)(0x00 + MAILBOX_BASE)))
 #define MAIL0_STATUS (((mail_status_t *)(0x18 + MAILBOX_BASE)))
 #define MAIL0_WRITE (((mail_message_t *)(0x20 + MAILBOX_BASE)))
